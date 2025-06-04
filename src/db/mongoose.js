@@ -6,7 +6,7 @@ const connectionString = process.env.MONGODB_URL || "mongodb+srv://gorantla04:6z
 async function connectToDatabase() {
  await mongoose.connect(connectionString, {
     autoIndex: true,
-    dbName: 'task-manager-api',
+    dbName: process.env.DB_NAME || 'task-manager-api',
 })
 
 
